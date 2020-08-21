@@ -7,17 +7,23 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: url(imgs/stadiumbg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .title{
     padding: 20px 100px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     font-family: 'wz' !important;
+    color: white;
 }
-.legends div{
+.subtitle, .subtitle div{
     display: flex;
     flex-direction: row;
     font-weight: bold;
+    margin-left: 10px;
+    font-weight: 100;
 }
 
 main{
@@ -148,8 +154,8 @@ main{
 .dot-1f-06-SE{
     width: 100%;
     position: relative;
-    margin-top: 450%;
-    margin-left: 390%;
+    margin-top: 410%;
+    margin-left: 270%;
 }
 
 .dot-1f-07-W{
@@ -232,8 +238,6 @@ main{
     transform: translate(-105%, 10%);
 }
 
-
-
 /* 2F */
 .dot-2f-01-N:hover .img-2f-N{
     display: block;
@@ -260,4 +264,20 @@ main{
 .executive img{
     border: 3px solid rgb(0, 89, 255);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (min-width: 2001px){
+    body{
+        background: none;
+    }
+    .title{
+        color: black;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    body{
+        background-position-x: -300px;
+    }
 }
