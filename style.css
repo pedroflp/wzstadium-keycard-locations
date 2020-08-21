@@ -6,6 +6,7 @@
 *{
     margin: 0;
     padding: 0;
+    transition: 0.4s ease-in;
 }
 body{
     background: url(imgs/stadiumbg.png) no-repeat;
@@ -17,6 +18,9 @@ body{
     padding: 20px 100px 0px;
     font-family: 'wz' !important;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .subtitle, .subtitle div{
     display: flex;
@@ -24,6 +28,7 @@ body{
     font-weight: bold;
     margin-left: 10px;
     font-weight: 100;
+    float: right;
 }
 
 main{
@@ -265,6 +270,61 @@ main{
     border: 3px solid rgb(0, 89, 255);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
+
+.dropbtn {
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'wz';
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px #ffffff;
+    background: none;
+    color: #ffffff;
+    box-shadow: inset 0px 0px 5px #ffffff;
+    border: 1px solid #f8f8f8;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    right: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f0f0f0}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
 
 
 @media screen and (min-width: 2001px){
