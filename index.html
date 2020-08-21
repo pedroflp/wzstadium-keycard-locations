@@ -3,34 +3,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" width="1900px">
     <title>WZ: KeyCards Location</title>
-    <link rel="icon" href="wz-icon.png">
+    <link rel="icon" href="imgs/wz-icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="title">
-        <h1>WZﾠ|ﾠWARZONE: <span style="font-weight: 100;">Stadium KeyCards Location</span></h1>
-        <br>
-        <div class="subtitle">
-            <div class="0f">
-                <div class="dot-0f"></div>
-                <span>0F - Parking</span>    
-            </div>
-            <div class="1f">
-                <div class="dot-1f"></div>
-                <span>1F - Main Floor</span>    
-            </div>
-            <div class="2f">
-                <div class="dot-2f"></div>
-                <span>2F - Executive</span>    
+        <div class="left-tab">
+            <h1>WZﾠ|ﾠWARZONE: <span style="font-weight: 100;">Stadium KeyCards Location</span></h1>
+            <br>
+            <div class="subtitle">
+                <div class="0f">
+                    <div class="dot-0f"></div>
+                    <span>0F - Parking</span>    
+                </div>
+                <div class="1f">
+                    <div class="dot-1f"></div>
+                    <span>1F - Main Floor</span>    
+                </div>
+                <div class="2f">
+                    <div class="dot-2f"></div>
+                    <span>2F - Executive</span>    
+                </div>
             </div>
         </div>
+
+        <div class="dropdown">
+            <div class="dropbtnborder">
+                <button class="dropbtn">Options</button>
+            </div>
+            <div class="dropdown-content">
+                <a onclick="showAll()">Show all</a>
+                <a onclick="show0f()">Show onlyﾠ<div class="dot-0f"></div> - 0F</a>
+                <a onclick="show1f()">Show onlyﾠ<div class="dot-1f"></div> - 1F</a>
+                <a onclick="show2f()">Show onlyﾠ<div class="dot-2f"></div> - 2F</a>
+            </div>
+          </div>
     </div>
 
     <main>
 
         <div class="locations">
-            <div class="0f-parking 0f parking"> 
+            <div class="0f-parking 0f parking" id="0f"> 
 
                 <div class="dot-0f-01-NW dots">
                     <div class="dot-0f"></div>
@@ -58,7 +72,7 @@
                 
             </div>
 
-            <div class="1f-mainfloor 1f mainfloor">
+            <div class="1f-mainfloor 1f mainfloor" id="1f">
 
                 <div class="dot-1f-01-N dots">
                     <div class="dot-1f"></div>
@@ -104,7 +118,7 @@
 
             </div>
 
-            <div class="2f-executive 2f executive">
+            <div class="2f-executive 2f executive" id="2f">
 
                 <div class="dot-2f-01-N dots">
                     <div class="dot-2f"></div>
@@ -131,14 +145,29 @@
     </main>
 
 <script>
-    document.addEventListener('keydown', function(event) {
-        const key = event.key;
-        if ( event.keyCode == 27 ) {
-            window.close.img;
-            console.log('au');
-        }
-    });
+    function showAll(){
+        document.getElementById('0f').style.opacity = '1';
+        document.getElementById('1f').style.opacity = '1';
+        document.getElementById('2f').style.opacity = '1';
+    }
 
+    function show0f(){
+        document.getElementById('0f').style.opacity = '1';
+        document.getElementById('1f').style.opacity = '0';
+        document.getElementById('2f').style.opacity = '0';
+    }
+
+    function show1f(){
+        document.getElementById('0f').style.opacity = '0';
+        document.getElementById('1f').style.opacity = '1';
+        document.getElementById('2f').style.opacity = '0';
+    }
+
+    function show2f(){
+        document.getElementById('0f').style.opacity = '0';
+        document.getElementById('1f').style.opacity = '0';
+        document.getElementById('2f').style.opacity = '1';
+    }
 </script>
 </body>
 </html>
